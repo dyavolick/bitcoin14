@@ -204,8 +204,8 @@ public:
 
         genesis = CreateGenesisBlock(1296688602, 414098458, 0x1d00ffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+     assert(consensus.hashGenesisBlock == uint256S("0x000000006a4cbdc03dbf67c5e5868aae1ec3fdea491482213cb3a9619e716395"));
+        assert(genesis.hashMerkleRoot == uint256S("0x238622dee14a2f1559bad0e4826d202fe15eedf55e5e4a1a36bcfe7dd1199385"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -231,7 +231,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 546, uint256S("000000002a936ca763904c3c35fce2f3556c559c0214345d31b1bcebf76acb70")),
+            ( 546, uint256S("000000006a4cbdc03dbf67c5e5868aae1ec3fdea491482213cb3a9619e716395")),
         };
 
         chainTxData = ChainTxData{
@@ -289,8 +289,8 @@ public:
 
         genesis = CreateGenesisBlock(1296688602, 2, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x7ac86e49fa2d78afa23711d7c3c7933d3632fad0593ea986f28105bd754cceb9"));
+        assert(genesis.hashMerkleRoot == uint256S("0xbc72a6a4a0fa5b40c78e5eed91d0cb1cfa10a6d40f382f0389e1da24498a23c3"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
@@ -302,7 +302,7 @@ public:
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
-            ( 0, uint256S("0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206"))
+            ( 0, uint256S("7ac86e49fa2d78afa23711d7c3c7933d3632fad0593ea986f28105bd754cceb9"))
         };
 
         chainTxData = ChainTxData{
