@@ -1165,6 +1165,12 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
+     if(nHeight == 5){
+        CAmount nSubsidy = 8021286 * COIN;// если это 5-й найденный блок, награда его владельцу будет 1 млн монет, а не стандартных 50.
+     return nSubsidy;
+     }
+
+
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
     // Force block reward to zero when right shift is undefined.
     if (halvings >= 64)
