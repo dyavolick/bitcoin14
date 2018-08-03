@@ -119,16 +119,12 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x000000006a4cbdc03dbf67c5e5868aae1ec3fdea491482213cb3a9619e716395"));
         assert(genesis.hashMerkleRoot == uint256S("0x238622dee14a2f1559bad0e4826d202fe15eedf55e5e4a1a36bcfe7dd1199385"));
 
-        // Note that of those with the service bits flag, most only support a subset of possible options
-        //vSeeds.push_back(CDNSSeedData("bitcoinold.sipa.be", "seed.bitcoinold.sipa.be", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
-        //vSeeds.push_back(CDNSSeedData("bluematt.me", "dnsseed.bluematt.me", true)); // Matt Corallo, only supports x9
-        //vSeeds.push_back(CDNSSeedData("dashjr.org", "dnsseed.bitcoinold.dashjr.org")); // Luke Dashjr
-        //vSeeds.push_back(CDNSSeedData("bitcoinoldstats.com", "seed.bitcoinoldstats.com", true)); // Christian Decker, supports x1 - xf
-        //vSeeds.push_back(CDNSSeedData("bitcoinold.jonasschnelli.ch", "seed.bitcoinold.jonasschnelli.ch", true)); // Jonas Schnelli, only supports x1, x5, x9, and xd
-
-        vSeeds.push_back(CDNSSeedData("node1.bitcoinoldold.com", "node1.bitcoinoldold.com", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
-        vSeeds.push_back(CDNSSeedData("node2.bitcoinoldold.com", "node2.bitcoinoldold.com", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
-        vSeeds.push_back(CDNSSeedData("node3.bitcoinoldold.com", "node3.bitcoinoldold.com", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
+        vFixedSeeds.clear();
+        vSeeds.clear();
+        vSeeds.push_back(CDNSSeedData("nbol1.bitcoinold.com", "nbol1.bitcoinold.com")); 
+        vSeeds.push_back(CDNSSeedData("nbol2.bitcoinold.com", "nbol2.bitcoinold.com")); 
+        vSeeds.push_back(CDNSSeedData("nbol3.bitcoinold.com", "nbol3.bitcoinold.com"));
+        vSeeds.push_back(CDNSSeedData("nbol4.bitcoinold.com", "nbol4.bitcoinold.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -169,7 +165,7 @@ public:
         consensus.BIP34Hash = uint256S("0x0000000023b3a96d3484e5abb3755c413e7d41500f8e2a5c3f0dd01299cd8ef8");
         consensus.BIP65Height = 581885; // 00000000007f6655f22f98e72ed80d8b06dc761d5da09df0fa1dc4be4f861eb6
         consensus.BIP66Height = 330776; // 000000002104c8c45e99a8853285a3b592602a3ccde2b832481da85e9e4ba182
-        consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.powLimit = uint256S("000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 10 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
@@ -191,10 +187,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1493596800; // May 1st 2017
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000001f057509eba81aed91");
+        consensus.nMinimumChainWork = uint256S("0x00");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x00000000000128796ee387cf110ccb9d2f36cffaf7f73079c995377c65ac0dcc"); //1079274
+        consensus.defaultAssumeValid = uint256S("0x000000006a4cbdc03dbf67c5e5868aae1ec3fdea491482213cb3a9619e716395"); //1079274
 
         pchMessageStart[0] = 0x0b;
         pchMessageStart[1] = 0x11;
@@ -203,18 +199,18 @@ public:
         nDefaultPort = 18333;
         nPruneAfterHeight = 1000;
 
-       genesis = CreateGenesisBlock(1524088375, 2825755318, 0x1d00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1524088375, 2825755318, 0x1d00ffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-       assert(consensus.hashGenesisBlock == uint256S("0x000000006a4cbdc03dbf67c5e5868aae1ec3fdea491482213cb3a9619e716395"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000000006a4cbdc03dbf67c5e5868aae1ec3fdea491482213cb3a9619e716395"));
         assert(genesis.hashMerkleRoot == uint256S("0x238622dee14a2f1559bad0e4826d202fe15eedf55e5e4a1a36bcfe7dd1199385"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("testnetbitcoinold.jonasschnelli.ch", "testnet-seed.bitcoinold.jonasschnelli.ch", true));
-        vSeeds.push_back(CDNSSeedData("petertodd.org", "seed.tbol.petertodd.org", true));
-        vSeeds.push_back(CDNSSeedData("bluematt.me", "testnet-seed.bluematt.me"));
-        vSeeds.push_back(CDNSSeedData("bitcoinold.schildbach.de", "testnet-seed.bitcoinold.schildbach.de"));
+       vSeeds.push_back(CDNSSeedData("nbol1.bitcoinold.com", "nbol1.bitcoinold.com")); 
+        vSeeds.push_back(CDNSSeedData("nbol2.bitcoinold.com", "nbol2.bitcoinold.com")); 
+        vSeeds.push_back(CDNSSeedData("nbol3.bitcoinold.com", "nbol3.bitcoinold.com"));
+        vSeeds.push_back(CDNSSeedData("nbol4.bitcoinold.com", "nbol4.bitcoinold.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
