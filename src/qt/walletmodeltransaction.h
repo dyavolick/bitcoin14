@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2014 The Bitcoin Core developers
+// Copyright (c) 2011-2014 The Bitcoinold Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_WALLETMODELTRANSACTION_H
-#define BITCOIN_QT_WALLETMODELTRANSACTION_H
+#ifndef BITCOINOLD_QT_WALLETMODELTRANSACTION_H
+#define BITCOINOLD_QT_WALLETMODELTRANSACTION_H
 
 #include "walletmodel.h"
 
@@ -44,4 +44,4 @@ private:
     CAmount fee;
 };
 
-#endif // BITCOIN_QT_WALLETMODELTRANSACTION_H
+#endif // BITCOINOLD_QT_WALLETMODELTRANSACTION_H

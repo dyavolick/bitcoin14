@@ -1,4 +1,4 @@
-Source: bitcoin
+Source: bitcoinold
 Section: utils
 Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk>
@@ -23,45 +23,45 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler,
  python
 Standards-Version: 3.9.2
-Homepage: https://bitcoincore.org/
-Vcs-Git: git://github.com/bitcoin/bitcoin.git
-Vcs-Browser: https://github.com/bitcoin/bitcoin
+Homepage: https://bitcoinoldcore.org/
+Vcs-Git: git://github.com/bitcoinold/bitcoinold.git
+Vcs-Browser: https://github.com/bitcoinold/bitcoinold
 
-Package: bitcoind
+Package: bitcoinoldd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Bitcoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer
+ Bitcoinold is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Bitcoinold uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Bitcoin Core
+ and issuing money are carried out collectively by the network. Bitcoinold Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides the daemon, bitcoind, and the CLI tool
- bitcoin-cli to interact with the daemon.
+ This package provides the daemon, bitcoinoldd, and the CLI tool
+ bitcoinold-cli to interact with the daemon.
 
-Package: bitcoin-qt
+Package: bitcoinold-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Bitcoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer
+ Bitcoinold is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Bitcoinold uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Bitcoin Core
+ and issuing money are carried out collectively by the network. Bitcoinold Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides Bitcoin-Qt, a GUI for Bitcoin based on Qt.
+ This package provides Bitcoinold-Qt, a GUI for Bitcoinold based on Qt.
 
-Package: bitcoin-tx
+Package: bitcoinold-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
- Bitcoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer
+ Bitcoinold is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Bitcoinold uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Bitcoin Core
+ and issuing money are carried out collectively by the network. Bitcoinold Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides bitcoin-tx, a command-line transaction creation
- tool which can be used without a bitcoin daemon.  Some means of
+ This package provides bitcoinold-tx, a command-line transaction creation
+ tool which can be used without a bitcoinold daemon.  Some means of
  exchanging minimal transaction data with peers is still required.

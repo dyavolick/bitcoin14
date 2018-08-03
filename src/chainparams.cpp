@@ -1,5 +1,5 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2016 The Bitcoin Core developers
+// Copyright (c) 2009-2016 The Bitcoinold Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -50,7 +50,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "10/02/2018 BitcoinOld Token Genesis Created!";
+    const char* pszTimestamp = "10/02/2018 BitcoinoldOld Token Genesis Created!";
     const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -120,15 +120,15 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x238622dee14a2f1559bad0e4826d202fe15eedf55e5e4a1a36bcfe7dd1199385"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        //vSeeds.push_back(CDNSSeedData("bitcoin.sipa.be", "seed.bitcoin.sipa.be", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
+        //vSeeds.push_back(CDNSSeedData("bitcoinold.sipa.be", "seed.bitcoinold.sipa.be", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
         //vSeeds.push_back(CDNSSeedData("bluematt.me", "dnsseed.bluematt.me", true)); // Matt Corallo, only supports x9
-        //vSeeds.push_back(CDNSSeedData("dashjr.org", "dnsseed.bitcoin.dashjr.org")); // Luke Dashjr
-        //vSeeds.push_back(CDNSSeedData("bitcoinstats.com", "seed.bitcoinstats.com", true)); // Christian Decker, supports x1 - xf
-        //vSeeds.push_back(CDNSSeedData("bitcoin.jonasschnelli.ch", "seed.bitcoin.jonasschnelli.ch", true)); // Jonas Schnelli, only supports x1, x5, x9, and xd
+        //vSeeds.push_back(CDNSSeedData("dashjr.org", "dnsseed.bitcoinold.dashjr.org")); // Luke Dashjr
+        //vSeeds.push_back(CDNSSeedData("bitcoinoldstats.com", "seed.bitcoinoldstats.com", true)); // Christian Decker, supports x1 - xf
+        //vSeeds.push_back(CDNSSeedData("bitcoinold.jonasschnelli.ch", "seed.bitcoinold.jonasschnelli.ch", true)); // Jonas Schnelli, only supports x1, x5, x9, and xd
 
-        vSeeds.push_back(CDNSSeedData("node1.bitcoinold.com", "node1.bitcoinold.com", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
-        vSeeds.push_back(CDNSSeedData("node2.bitcoinold.com", "node2.bitcoinold.com", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
-        vSeeds.push_back(CDNSSeedData("node3.bitcoinold.com", "node3.bitcoinold.com", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
+        vSeeds.push_back(CDNSSeedData("node1.bitcoinoldold.com", "node1.bitcoinoldold.com", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
+        vSeeds.push_back(CDNSSeedData("node2.bitcoinoldold.com", "node2.bitcoinoldold.com", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
+        vSeeds.push_back(CDNSSeedData("node3.bitcoinoldold.com", "node3.bitcoinoldold.com", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -211,10 +211,10 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("testnetbitcoin.jonasschnelli.ch", "testnet-seed.bitcoin.jonasschnelli.ch", true));
-        vSeeds.push_back(CDNSSeedData("petertodd.org", "seed.tbtc.petertodd.org", true));
+        vSeeds.push_back(CDNSSeedData("testnetbitcoinold.jonasschnelli.ch", "testnet-seed.bitcoinold.jonasschnelli.ch", true));
+        vSeeds.push_back(CDNSSeedData("petertodd.org", "seed.tbol.petertodd.org", true));
         vSeeds.push_back(CDNSSeedData("bluematt.me", "testnet-seed.bluematt.me"));
-        vSeeds.push_back(CDNSSeedData("bitcoin.schildbach.de", "testnet-seed.bitcoin.schildbach.de"));
+        vSeeds.push_back(CDNSSeedData("bitcoinold.schildbach.de", "testnet-seed.bitcoinold.schildbach.de"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);

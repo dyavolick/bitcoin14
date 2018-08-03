@@ -1,9 +1,9 @@
-// Copyright (c) 2015-2016 The Bitcoin Core developers
+// Copyright (c) 2015-2016 The Bitcoinold Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
-#define BITCOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
+#ifndef BITCOINOLD_ZMQ_ZMQNOTIFICATIONINTERFACE_H
+#define BITCOINOLD_ZMQ_ZMQNOTIFICATIONINTERFACE_H
 
 #include "validationinterface.h"
 #include <string>
@@ -34,4 +34,4 @@ private:
     std::list<CZMQAbstractNotifier*> notifiers;
 };
 
-#endif // BITCOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
+#endif // BITCOINOLD_ZMQ_ZMQNOTIFICATIONINTERFACE_H

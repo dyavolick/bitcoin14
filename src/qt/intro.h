@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2016 The Bitcoin Core developers
+// Copyright (c) 2011-2016 The Bitcoinold Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_INTRO_H
-#define BITCOIN_QT_INTRO_H
+#ifndef BITCOINOLD_QT_INTRO_H
+#define BITCOINOLD_QT_INTRO_H
 
 #include <QDialog>
 #include <QMutex>
@@ -75,4 +75,4 @@ private:
     friend class FreespaceChecker;
 };
 
-#endif // BITCOIN_QT_INTRO_H
+#endif // BITCOINOLD_QT_INTRO_H

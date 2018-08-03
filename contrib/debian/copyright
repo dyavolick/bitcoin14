@@ -1,13 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Bitcoin
+Upstream-Name: Bitcoinold
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
- irc://#bitcoin@freenode.net
-Source: https://github.com/bitcoin/bitcoin
+ irc://#bitcoinold@freenode.net
+Source: https://github.com/bitcoinold/bitcoinold
 
 Files: *
-Copyright: 2009-2017, Bitcoin Core Developers
+Copyright: 2009-2017, Bitcoinold Core Developers
 License: Expat
-Comment: The Bitcoin Core Developers encompasses the current developers listed on bitcoin.org,
+Comment: The Bitcoinold Core Developers encompasses the current developers listed on bitcoinold.org,
          as well as the numerous contributors to the project.
 
 Files: debian/*
@@ -78,12 +78,12 @@ License: Expat
 Comment: Modifications of Stephan Hutchings Typicons
 
 Files: src/qt/res/icons/about.png
-       src/qt/res/icons/bitcoin.*
-       share/pixmaps/bitcoin*
-       src/qt/res/src/bitcoin.svg
+       src/qt/res/icons/bitcoinold.*
+       share/pixmaps/bitcoinold*
+       src/qt/res/src/bitcoinold.svg
 Copyright: Bitboy, Jonas Schnelli
 License: public-domain
-Comment: Site: https://bitcointalk.org/?topic=1756.0
+Comment: Site: https://bitcoinoldtalk.org/?topic=1756.0
 
 
 License: Expat

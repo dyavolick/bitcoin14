@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Bitcoin Core developers
+# Copyright (c) 2014-2016 The Bitcoinold Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import BitcoinoldTestFramework
 from test_framework.util import *
 
 
@@ -14,7 +14,7 @@ def get_unspent(listunspent, amount):
     raise AssertionError('Could not find unspent with amount={}'.format(amount))
 
 
-class RawTransactionsTest(BitcoinTestFramework):
+class RawTransactionsTest(BitcoinoldTestFramework):
 
     def __init__(self):
         super().__init__()
@@ -206,9 +206,9 @@ class RawTransactionsTest(BitcoinTestFramework):
 
         try:
             self.nodes[2].fundrawtransaction(rawtx, {'changeAddress': 'foobar'})
-            raise AssertionError("Accepted invalid bitcoin address")
+            raise AssertionError("Accepted invalid bitcoinold address")
         except JSONRPCException as e:
-            assert("changeAddress must be a valid bitcoin address" in e.error['message'])
+            assert("changeAddress must be a valid bitcoinold address" in e.error['message'])
 
 
         ############################################################
@@ -449,7 +449,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         mSigObj = self.nodes[2].addmultisigaddress(2, [addr1Obj['pubkey'], addr2Obj['pubkey']])
 
 
-        # send 1.2 BTC to msig addr
+        # send 1.2 BOL to msig addr
         txId = self.nodes[0].sendtoaddress(mSigObj, 1.2)
         self.sync_all()
         self.nodes[1].generate(1)
