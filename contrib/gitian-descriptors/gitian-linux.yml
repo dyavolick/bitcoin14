@@ -2,7 +2,7 @@
 name: "bitcoinold-linux-0.14"
 enable_cache: true
 suites:
-- "trusty"
+- "xenial"
 architectures:
 - "amd64"
 packages:
@@ -28,7 +28,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/bitcoinold/bitcoinold.git"
+- "url": "https://github.com/dyavolick/bitcoin14.git"
   "dir": "bitcoinold"
 files: []
 script: |

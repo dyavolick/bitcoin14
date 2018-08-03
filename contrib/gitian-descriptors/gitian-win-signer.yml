@@ -1,14 +1,14 @@
 ---
 name: "bitcoinold-win-signer"
 suites:
-- "trusty"
+- "xenial"
 architectures:
 - "amd64"
 packages:
 - "libssl-dev"
 - "autoconf"
 remotes:
-- "url": "https://github.com/bitcoinold-core/bitcoinold-detached-sigs.git"
+- "url": "https://github.com/bitcoin-core/bitcoin-detached-sigs.git"
   "dir": "signature"
 files:
 - "osslsigncode-1.7.1.tar.gz"
