@@ -190,7 +190,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x00");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000000006a4cbdc03dbf67c5e5868aae1ec3fdea491482213cb3a9619e716395"); //1079274
+         consensus.defaultAssumeValid = uint256S("0x00");; //1079274
 
         pchMessageStart[0] = 0x0b;
         pchMessageStart[1] = 0x11;
